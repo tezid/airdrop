@@ -7,8 +7,7 @@ Due to massive interest we are looking at options to increase the airdrop alloca
 
 Airdrop date is planned for 26th of september 2021.
 
-A new snapshot will be taken on that date allowing anyone time to verify their proofs before this date.  
-Verifying your proof will increase your allocation.
+A new snapshot will be taken on that date allowing anyone ample time to verify their proofs. Verifying your proof will increase your allocation.
 
 ## Run
 
