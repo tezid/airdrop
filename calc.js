@@ -34,7 +34,9 @@ const tokenWeight = parseFloat((totalIdz / totalWeight).toFixed(DECIMALS))
 Object.keys(weighted).forEach(address => {
   let data = weighted[address]
   data.tokens = data.weight * tokenWeight
+  data.transferred = false
 })
 
-console.log(weighted)
-console.log(Object.keys(weighted).length) 
+fs.writeFileSync('weighted.json', JSON.stringify(weighted))
+//console.log(weighted)
+//console.log(Object.keys(weighted).length)

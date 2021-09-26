@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "calc": "node calc.js",
+    "send": "node send.js"
   },
   "author": "",
   "license": "ISC"
