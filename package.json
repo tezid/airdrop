@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "calc": "node calc.js",
-    "send": "node send.js"
+    "send": "node send.js",
+    "csv": "node csv.js"
   },
   "author": "",
   "license": "ISC",
