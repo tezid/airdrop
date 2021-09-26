@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 const snapshot = JSON.parse(fs.readFileSync('./snapshot.json').toString())
-const totalIdz = 50000 // NOTE: Make sure to keep 1 for rounding diffs 
+const totalIdz = 98490 // NOTE: Make sure to keep 1 for rounding diffs 
 const announceDate = new Date(Date.UTC(2021, 7, 26, 0, 0))
 const snapshotDate = new Date(Date.UTC(2021, 8, 12, 14, 0))
 const UNVERIFIED_WEIGHT = 1
@@ -38,5 +38,6 @@ Object.keys(weighted).forEach(address => {
 })
 
 fs.writeFileSync('weighted.json', JSON.stringify(weighted))
-//console.log(weighted)
-//console.log(Object.keys(weighted).length)
+console.log(weighted)
+console.log(Object.keys(weighted).length)
+console.log(Object.values(weighted).reduce((sum, t) => sum+t.tokens, 0))
