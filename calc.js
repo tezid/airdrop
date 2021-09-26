@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 const snapshot = JSON.parse(fs.readFileSync('./snapshot.json').toString())
-const totalIdz = 50000
+const totalIdz = 50000 // NOTE: Make sure to keep 1 for rounding diffs 
 const announceDate = new Date(Date.UTC(2021, 7, 26, 0, 0))
 const snapshotDate = new Date(Date.UTC(2021, 8, 12, 14, 0))
 const UNVERIFIED_WEIGHT = 1
