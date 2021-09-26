@@ -9,5 +9,9 @@
     "send": "node send.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@taquito/signer": "^10.1.2",
+    "@taquito/taquito": "^10.1.2"
+  }
 }

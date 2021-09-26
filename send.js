@@ -1,4 +1,20 @@
 import fs from 'fs'
+import { importKey } from '@taquito/signer'
+import { TezosToolkit } from '@taquito/taquito'
+import {
+  AIRDROP_ADMIN,
+  IDZ_CONTRACT,
+  TEZOS_RPC,
+} from './config.js'
+
+const FAUCET_KEY = JSON.parse(fs.readFileSync(`../tezid-secrets/${AIRDROP_ADMIN}.json`).toString())
+const tezos = new TezosToolkit(TEZOS_RPC)
+importKey(tezos,
+  FAUCET_KEY.email,
+  FAUCET_KEY.password,
+  FAUCET_KEY.mnemonic.join(' '),
+  FAUCET_KEY.secret
+).catch((e) => console.error(e))
 
 const weighted = JSON.parse(fs.readFileSync('weighted.json'))
 const batchSize = 500
